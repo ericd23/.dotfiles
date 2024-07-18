@@ -9,7 +9,6 @@ packages:
     - 'difftastic'
     - 'direnv'
     - 'docker-compose'
-    - 'ffmpeg'
     - 'gitui'
     - 'lf'
     - 'neovim'
