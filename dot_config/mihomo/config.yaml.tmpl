@@ -102,15 +102,24 @@ proxy-groups:
   - {name: Github, <<: *pr}
 
 rule-providers:
-  steam:
+  steamcn:
     type: http
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/SteamCN/SteamCN.yaml"
     interval: 600
     proxy: DIRECT
     behavior: classical
     format: yaml
+  gamedownload:
+    type: http
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Game/GameDownloadCN/GameDownloadCN.yaml"
+    interval: 600
+    proxy: DIRECT
+    behavior: classical
+    format: yaml
 
 rules:
+  - RULE-SET,steamcn,DIRECT
+  - RULE-SET,gamedownload,DIRECT
   - GEOIP,lan,直连,no-resolve
   - GEOSITE,github,Github
   - GEOSITE,twitter,Twitter
