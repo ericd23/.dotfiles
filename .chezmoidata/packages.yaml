@@ -1,0 +1,17 @@
+packages:
+  shared:
+    brews:
+    - 'age'
+    - 'atool'
+    - 'atuin'
+    - 'chezmoi'
+    - 'ctpv'
+    - 'difftastic'
+    - 'direnv'
+    - 'docker-compose'
+    - 'ffmpeg'
+    - 'gitui'
+    - 'lf'
+    - 'neovim'
+    - 'tmux'
+    - 'mihomo'
