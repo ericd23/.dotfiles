@@ -1,0 +1,62 @@
+{
+  "theme": "Sandcastle",
+  "vim_mode": true,
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "ui_font_size": 14,
+  "buffer_font_size": 14,
+  "terminal": {
+    "shell": {
+      "program": "fish"
+    },
+    "detect_venv": {
+      "on": {
+        "activate_script": "fish"
+      }
+    }
+  },
+  "assistant": {
+    "default_model": {
+      "provider": "openai",
+      "model": "gpt-4o-mini"
+    },
+    "dock": "bottom",
+    "version": "2",
+    "provider": null
+  },
+  "languages": {
+    "Rust": {
+      "show_inline_completions": true
+    },
+    "Python": {
+      "format_on_save": {
+        "external": {
+          "command": "black",
+          "arguments": ["-"]
+        }
+      }
+    },
+    "TypeScript": {
+      "format_on_save": {
+        "external": {
+          "command": "prettier",
+          "arguments": ["--stdin-filepath", "{buffer_path}"]
+        }
+      },
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    }
+  },
+  "lsp": {
+    "rust-analyzer": {
+      "initialization_options": {
+        "rust": {
+          "analyzerTargetDir": true // use different target folder for cargo and analyzer. fix recompiling issue for tauri (temporarily until tauri refine the build script)
+        }
+      }
+    }
+  }
+}
